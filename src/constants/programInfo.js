@@ -95,7 +95,7 @@ export const schoolURL = 'https://nycdatascience.com/' // update with url of sch
 
 export const skfURL = 'https://nycdatascience.skills.fund/' // update with Skills Fund url
 
-export const headline = "Learn to Data Science at NYC Data Science Academy" // update headline as appropriate
+export const headline = "Learn Data Science at NYC Data Science Academy" // update headline as appropriate
 
 export const leadContent = {
     header: "Your last step on the path toward changing your career",
