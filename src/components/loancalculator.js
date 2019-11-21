@@ -85,7 +85,7 @@ const calculateUpdatedAmount = () => {
                 <h3 className="text-center">Calculate Your Monthly Payments</h3>
 
                 {/* UPDATE LOAN AMOUNTS AND COST OF LIVING BY PROGRAM BELOW */}
-                <p className="text-center">{programMaxText}</p>
+                <p className="text-center">{programMaxText} <br/><br/><strong>Remote Intensive Bootcamp (Data Science Online) students:</strong> NYC Data Science Academy is currently offering 15% off tuition for its January cohort, bringing the cost down from $17,600 to $14,960.</p>
                 {paymentTable.show && <LoanCalcPaymentTable />}
 
                 <div className="flex flex-col justify-center w-full md:w-1/3">
