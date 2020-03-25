@@ -111,12 +111,12 @@ const LoanCalculator = () => {
         {/* UPDATE LOAN AMOUNTS AND COST OF LIVING BY PROGRAM BELOW */}
         <p className="text-center">
           {programMaxText} <br />
-          <br />
+          {/* <br />
           <strong>
             Remote Intensive Bootcamp (Data Science Online) students:
           </strong>{" "}
           NYC Data Science Academy is currently offering 15% off tuition for its
-          January cohort, bringing the cost down from $17,600 to $14,960.
+          January cohort, bringing the cost down from $17,600 to $14,960. */}
         </p>
         {paymentTable.show && <LoanCalcPaymentTable />}
 
