@@ -19,7 +19,7 @@ const Header = ({ siteTitle }) => (
             <img
               src={schoolLogo} 
               alt={schoolName}
-              className="h-8"
+              className="h-12"
               loading="lazy"
               id="schoolLogo"
             />
