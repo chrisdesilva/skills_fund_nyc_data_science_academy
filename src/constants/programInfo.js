@@ -47,6 +47,66 @@ export const schoolInfo = {
   ],
 }
 
+export const interestRateCards = {
+  // 3 month program, 3 months grace for term details section
+  APR36: "8.95 - 17.21%",
+  APR60: "10.00 - 17.24%",
+  immediateRepayment: {
+    int36: "6.50 - 13.75%",
+    int60: "8.25 - 15.00%",
+    // APR36: "9.82% - 17.21%",
+    // APR60: "10.34% - 17.24%",
+  },
+  interestOnly: {
+    int36: "6.50 - 13.75%",
+    int60: "8.25 - 15.00%",
+    // APR36: "8.87 - 16.29%",
+    // APR60: "9.96 - 16.87%",
+  },
+  deferred: {
+    int36: "7.00 - 14.25%",
+    int60: "8.75 - 15.50%",
+    // APR36: "9.24 - 16.43%",
+    // APR60: "9.90 - 16.68%",
+  },
+}
+
+export const previewText = {
+  headline: "Simple. Flexible.",
+  subheadline:
+    "We offer loans tailored to your needs. Preview your options and select the right financing solution for you.",
+  // headline: "Simple. Clear.",
+  // subheadline:
+  //   "We offer a straightforward loan so you can focus on your program and transform your future.",
+  cards: [
+    {
+      heading: "Deferred Repayment",
+      body: "Make no payments while you study and for three months after.",
+    },
+    {
+      heading: "Interest Only",
+      body:
+        "Make low interest-only payments while you study and for three months after completing your program.",
+    },
+    {
+      heading: "Immediate Repayment",
+      body: "Start paying your loan back one month after your program begins.",
+    },
+    // {
+    //   heading: "36-Month Loan",
+    //   // body:
+    //   //   "Pay off your loan faster. Start paying your loan back one month after your program begins, and make 36 monthly payments until your loan is repaid.",
+    //   body:
+    //     "Start paying your loan back one month after your program begins, and make 36 monthly payments until your loan is repaid.",
+    // },
+    // {
+    //   heading: "60-Month Loan",
+    //   body:
+    //     "Make smaller monthly payments. Start paying your loan back one month after your program begins, and make 60 monthly payments until your loan is repaid.",
+    // },
+  ],
+}
+
 export const faq = {
   // faq section
   costOfLiving: true, // true if at least one program has cost of living included
@@ -73,13 +133,19 @@ export const faq = {
   // max loan amounts by program for faq1
   loanRange: [
     {
-      programName: "the Data Science On-Campus program",
+      programName: "Data Science Bootcamp",
       maxAmount: "$17,600",
       col: true,
       colAmount: "$7,500",
     },
     {
-      programName: "the Data Science Online program",
+      programName: "Data Science Bootcamp - Online Part-Time",
+      maxAmount: "$17,600",
+      col: false,
+      colAmount: "$6,000",
+    },
+    {
+      programName: "Data Science Bootcamp - Online Full-Time",
       maxAmount: "$17,600",
       col: false,
       colAmount: "$6,000",
@@ -141,7 +207,7 @@ export const moreThanSixPrograms = false // set to true if there are 7 or more p
 export const programLoanInfo = [
   // update with program names and corresponding loan URLs with market segment code from Master Loan Parameters
   {
-    name: "Data Science On-Campus",
+    name: "Data Science Bootcamp",
     url: "https://my.skills.fund/application?lenderCode=SFNYCDSA",
     loanInfo: {
       // match loanInfo in first metro below
@@ -181,8 +247,48 @@ export const programLoanInfo = [
     ],
   },
   {
-    name: "Data Science Online",
+    name: "Data Science Bootcamp - Online Part-Time",
     url: "https://my.skills.fund/application?lenderCode=SFNYCDSAPT",
+    loanInfo: {
+      // match loanInfo in first metro below
+      maxLoanAmt: 17600,
+      loanTerm36: true,
+      loanTerm60: true,
+      "Interest Only": {
+        k: 5,
+      },
+      "Immediate Repayment": {
+        apr36: 12.36,
+        apr60: 13.14,
+      },
+    },
+    defaultLoanType: "Immediate Repayment", // leave at 0 for interest-only, set to 1 for immediate repayment
+    showMetros: false,
+    showLoanTypes: false,
+    loanTypes: ["Immediate Repayment"],
+    locations: ["Metro 1", "Metro 2"],
+    metros: [
+      {
+        location: "Metro 1",
+        loanInfo: {
+          // match loanInfo to Program 2 loanInfo above
+          maxLoanAmt: 17600,
+          loanTerm36: true,
+          loanTerm60: true,
+          "Interest Only": {
+            k: 5,
+          },
+          "Immediate Repayment": {
+            apr36: 12.36,
+            apr60: 13.14,
+          },
+        },
+      },
+    ],
+  },
+  {
+    name: "Data Science Bootcamp - Online Full-Time",
+    url: "https://my.skills.fund/application?lenderCode=SKNYSANY18",
     loanInfo: {
       // match loanInfo in first metro below
       maxLoanAmt: 17600,
