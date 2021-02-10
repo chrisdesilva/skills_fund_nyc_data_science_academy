@@ -133,7 +133,7 @@ export const faq = {
   // max loan amounts by program for faq1
   loanRange: [
     {
-      programName: "Data Science Bootcamp",
+      programName: "Data Science Bootcamp - Live Online",
       maxAmount: "$17,600",
       col: true,
       colAmount: "$7,500",
@@ -207,7 +207,7 @@ export const moreThanSixPrograms = false // set to true if there are 7 or more p
 export const programLoanInfo = [
   // update with program names and corresponding loan URLs with market segment code from Master Loan Parameters
   {
-    name: "Data Science Bootcamp",
+    name: "Data Science Bootcamp - Live Online",
     url: "https://my.skills.fund/application?lenderCode=SFNYCDSA",
     loanInfo: {
       // match loanInfo in first metro below
